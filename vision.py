@@ -4,7 +4,7 @@ import json
 import re
 import sys
 from openai import AzureOpenAI
-from image_plotter import plot_on_image
+from image_plotter import plot_on_image, plot_on_image_with_plotly
 
 AZURE_OPENAI_MODEL = os.environ["AZURE_OPENAI_MODEL"]
 AZURE_OPENAI_RESOURCE = os.environ["AZURE_OPENAI_RESOURCE"]
@@ -88,6 +88,7 @@ try:
             temperature=0
         )
 
+        image_data_to_plot = ''
         for chunk in stream:
           if chunk.choices and chunk.choices[0].delta.content:
               if isinstance(chunk.choices[0].delta.content, str):
@@ -95,8 +96,7 @@ try:
                   full_response += chunk.choices[0].delta.content
                   sys.stdout.flush() # flush the buffer buffer explicitly
               else:
-                  if image_path != '':
-                    plot_on_image(chunk.choices[0].delta.content, image_path)
+                  image_data_to_plot = chunk.choices[0].delta.content
 
         if full_response:
             messages.append({
@@ -105,6 +105,9 @@ try:
                     {"type": "text", "text": full_response}
                 ]
             })
+
+        if image_data_to_plot != '' and image_path != '':
+            plot_on_image_with_plotly(image_data_to_plot, image_path)
 
         print()
         print()
