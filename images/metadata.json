@@ -1,0 +1,70 @@
+[
+    {
+        "image_blob_path": "basketball.jpg",
+        "description": "category is sports equipment, product name is Standard Basketball, price is $30"
+    },
+    {
+        "image_blob_path": "baseball.jpg",
+        "description": "category is sports equipment, product name is Pro League Baseball, price is $25"
+    },
+    {
+        "image_blob_path": "football.jpg",
+        "description": "category is sports equipment, product name is Pro Touch Football, price is $45"
+    },
+    {
+        "image_blob_path": "soccerball.jpg",
+        "description": "category is sports equipment, product name is Club Match Soccer Ball, price is $40"
+    },
+    {
+        "image_blob_path": "volleyball.jpg",
+        "description": "category is sports equipment, product name is Beach Pro Volleyball, price is $35"
+    },
+    {
+        "image_blob_path": "golfball.jpg",
+        "description": "category is sports equipment, product name is Tour Precision Golf Ball, price is $20"
+    },
+    {
+        "image_blob_path": "tennisball.jpg",
+        "description": "category is sports equipment, product name is Championship Tennis Ball, price is $15"
+    },
+    {
+        "image_blob_path": "basketball-unicorn.jpg",
+        "description": "category is sports equipment, product name is Rainbow Unicorn Basketball, price is $50"
+    },
+    {
+        "image_blob_path": "pingpongball.jpg",
+        "description": "category is sports equipment, product name is Highlighter Yellow Ping Pong Ball, price is $10"
+    },
+    {
+        "image_blob_path": "football-flamingo.jpg",
+        "description": "category is sports equipment, product name is Flamingo Pattern Football, price is $55"
+    },
+    {
+        "image_blob_path": "basketball-beach.jpg",
+        "description": "category is sports equipment, product name is Beach Vibes Basketball, price is $55"
+    },
+    {
+        "image_blob_path": "football-africa.jpg",
+        "description": "category is sports equipment, product name is Safari Adventure Soccer Ball, price is $60"
+    },
+    {
+        "image_blob_path": "baseball-pizza.jpg",
+        "description": "category is sports equipment, product name is Pizza Lovers Baseball, price is $30"
+    },
+    {
+        "image_blob_path": "basketball-forest.jpg",
+        "description": "category is sports equipment, product name is Forest Pattern Basketball, price is $50"
+    },
+    {
+        "image_blob_path": "basketball-emoji.jpg",
+        "description": "category is sports equipment, product name is Angry Emoji Football, price is $45"
+    },
+    {
+        "image_blob_path": "tennisball-broccoli.jpg",
+        "description": "category is sports equipment, product name is Broccoli Pattern Tennis Ball, price is $20"
+    },
+    {
+        "image_blob_path": "football-cheese.jpg",
+        "description": "category is sports equipment, product name is Cheese and Sausage Football, price is $55"
+    }
+]
