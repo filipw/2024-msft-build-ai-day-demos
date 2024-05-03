@@ -109,6 +109,7 @@ try:
         if image_data_to_plot != '' and image_path != '':
             plot_on_image_with_plotly(image_data_to_plot, image_path)
 
+        img_match = None
         print()
         print()
 
