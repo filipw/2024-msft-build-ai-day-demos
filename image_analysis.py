@@ -117,7 +117,7 @@ def print_image_analysis_results(result):
     print(f" Image width: {result.metadata.width}")
 
 if __name__ == "__main__":
-    result = sample_objects_image_file("images/filip-conf4.jpg")
+    result = sample_objects_image_file("images/filip-conf2.jpg")
     print_image_analysis_results(result)
     oai_result_dict = convert_to_openai_format(result.dense_captions.list, result.metadata.width, result.metadata.height)
-    plot_on_image_with_plotly(oai_result_dict, "images/filip-conf4.jpg")
+    plot_on_image_with_plotly(oai_result_dict, "images/filip-conf2.jpg")

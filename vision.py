@@ -45,7 +45,7 @@ extra_body = {
 # the user can supply a message either as pure text
 # or as text with image URL in the format [img=path/to/image.jpg]
 # -- example --
-# describe the image [img=images/filip-conf4.jpg]
+# describe the image [img=images/filip-conf2.jpg]
 img_regex = r'\[img=([a-zA-Z0-9_/-]+)\.(jpg|jpeg|png|gif)\]$'
 
 try:
