@@ -47,18 +47,15 @@ img_regex = r'\[img=([a-zA-Z0-9_/-]+)\.(jpg|jpeg|png|gif)\]$'
 def perform_image_search(text_query, image_vector=None):
     search_client = SearchClient(endpoint=AZURE_AI_SEARCH_ENDPOINT, credential=AzureKeyCredential(AZURE_AI_SEARCH_KEY), index_name=AZURE_AI_SEARCH_INDEX_NAME)
 
+    vector_queries = None
     if image_vector is not None:
-        vector_query = VectorizedQuery(vector=image_vector, k_nearest_neighbors=3, fields="image_vector")
-        results = search_client.search(  
-            search_text=text_query,  
-            vector_queries= [vector_query],
-            select=["description", "filepath"],
-        )  
-    else:
-        results = search_client.search(  
-            search_text=text_query,  
-            select=["description", "filepath"],
-        )
+        vector_queries = [VectorizedQuery(vector=image_vector, k_nearest_neighbors=3, fields="image_vector")]
+
+    results = search_client.search(  
+        search_text=text_query,  
+        vector_queries=vector_queries,
+        select=["description", "filepath"],
+    )  
     
     return results
 
