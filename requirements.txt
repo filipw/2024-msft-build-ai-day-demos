@@ -2,3 +2,4 @@ openai
 matplotlib
 requests
 azure-ai-vision-imageanalysis
+azure-search-documents

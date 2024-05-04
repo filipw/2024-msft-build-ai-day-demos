@@ -98,7 +98,7 @@ try:
 
         if full_response:
             messages.append({
-                "role": "system",
+                "role": "assistant",
                 "content": [
                     {"type": "text", "text": full_response}
                 ]
