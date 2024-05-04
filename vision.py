@@ -45,7 +45,7 @@ extra_body = {
 # the user can supply a message either as pure text
 # or as text with image URL in the format [img=path/to/image.jpg]
 # -- example --
-# describe the image [img=images/ManInStreet.jpg]
+# describe the image [img=images/filip-conf4.jpg]
 img_regex = r'\[img=([a-zA-Z0-9_/-]+)\.(jpg|jpeg|png|gif)\]$'
 
 try:
@@ -81,7 +81,7 @@ try:
         stream = azure_openai_client.chat.completions.create(
             model=AZURE_OPENAI_MODEL,
             messages=messages,
-            max_tokens=200,
+            max_tokens=800,
             extra_body=extra_body,
             stream=True,
             top_p=0,
@@ -96,6 +96,7 @@ try:
                   full_response += chunk.choices[0].delta.content
                   sys.stdout.flush() # flush the buffer buffer explicitly
               else:
+                  print("  [see browser window for more details]   ")
                   image_data_to_plot = chunk.choices[0].delta.content
 
         if full_response:

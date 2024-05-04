@@ -51,9 +51,8 @@ def main(folder_path, endpoint, subscription_key):
             except Exception as e:
                 print(f"Failed to process {filename}: {e}")
 
-folder_path = 'process-images/'
-
 if __name__ == "__main__":
+    folder_path = 'process-images/'
     AZURE_VISION_ENDPOINT = os.environ["AZURE_VISION_ENDPOINT"]
     AZURE_VISION_KEY = os.environ["AZURE_VISION_KEY"]
     main(folder_path, AZURE_VISION_ENDPOINT, AZURE_VISION_KEY)
